@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 import numpy as np
 import pandas as pd
 
@@ -8,6 +9,12 @@ st.set_page_config(
    page_icon="🎲",
    layout="wide",
 )
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+indian_celebs_path = os.path.join(current_dir, "Data Files", "Indian_Celbs.csv")
+international_celebs_path = os.path.join(current_dir, "Data Files", "International_Celbs.csv")
+cartoon_char_path = os.path.join(current_dir, "Data Files", "Cartoon_Characters.csv")
 
 Indian_Celebs_df = pd.read_csv(r"Data Files\Indian_Celbs.csv")
 International_Celebs_df = pd.read_csv(r"Data Files\International_Celebs.csv")
