@@ -13,12 +13,12 @@ st.set_page_config(
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
 indian_celebs_path = os.path.join(current_dir, "Data Files", "Indian_Celbs.csv")
-international_celebs_path = os.path.join(current_dir, "Data Files", "International_Celbs.csv")
+international_celebs_path = os.path.join(current_dir, "Data Files", "International_Celebs.csv")
 cartoon_char_path = os.path.join(current_dir, "Data Files", "Cartoon_Characters.csv")
 
-Indian_Celebs_df = pd.read_csv(r"Data Files\Indian_Celbs.csv")
-International_Celebs_df = pd.read_csv(r"Data Files\International_Celebs.csv")
-Cartoon_Char_df = pd.read_csv(r"Data Files\Cartoon_Characters.csv")
+Indian_Celebs_df = pd.read_csv(indian_celebs_path)
+International_Celebs_df = pd.read_csv(international_celebs_path)
+Cartoon_Char_df = pd.read_csv(cartoon_char_path)
 
 # Streamlit Code
 st.write("---")
